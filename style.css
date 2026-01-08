@@ -47,6 +47,7 @@ h1 {
   transform: translateX(-50%) rotate(0deg);
   transform-origin: 50% 100%; /* pivot en bas */
   z-index: 3;
+    opacity: 0;   /* complètement invisible */
 }
 
 /* Supprime .arrow::after si tu veux éviter l'ombre noire */
