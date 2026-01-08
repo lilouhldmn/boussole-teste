@@ -36,14 +36,22 @@ h1 {
 }
 
 .arrow {
-  /* Supprime top: 0 */
-  bottom: 0; /* ancre en bas */
-  border-top: 150px solid rgb(255, 0, 0); /* flèche vers le haut */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
-  border-bottom: none;
-  /* transform reste identique */
+  border-top: 150px solid rgb(255, 0, 0); /* pointe vers le haut */
   transform: translateX(-50%) rotate(0deg);
+  transform-origin: 50% 100%; /* pivot en bas */
+  z-index: 3;
+}
+
+/* Supprime .arrow::after si tu veux éviter l'ombre noire */
+.arrow::after {
+  display: none; /* ou supprime complètement cette règle */
 }
 
 .north-arrow {
